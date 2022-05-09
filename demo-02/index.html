@@ -13,8 +13,13 @@
   <script src="./objRender.js"></script>
   <script>
     // alert(window.objRender.key)
-    let objRender2 = require('./objRender2.js')
-    alert(objRender2)
+    // let objRender2 = require('./objRender2.js')
+    // alert(objRender2)
+    document.onclick = async () => {
+      // window.electronAPI.setTitle(Date.now())
+      let filePath = await window.electronAPI.openFile();
+      console.log(filePath);
+    }
   </script>
 </body>
 
